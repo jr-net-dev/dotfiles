@@ -6,7 +6,7 @@ config.color_scheme = "Argonaut"
 
 -- font chooser: uncomment ONE. takes effect on save, no rebuild needed.
 -- config.font = wezterm.font("CommitMono Nerd Font")     -- neutral, low-fatigue
--- config.font = wezterm.font("BlexMono Nerd Font")       -- IBM Plex, warm + open
+config.font = wezterm.font("BlexMono Nerd Font")       -- IBM Plex, warm + open
 -- config.font = wezterm.font("CaskaydiaCove Nerd Font")  -- Cascadia, roomy
 -- config.font = wezterm.font("GeistMono Nerd Font")      -- clean + airy
 -- config.font_size = 14.0                                -- default is 12.0
