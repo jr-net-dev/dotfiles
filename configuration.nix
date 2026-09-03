@@ -28,6 +28,7 @@
   nix-homebrew = {
     enable = true;
     inherit user;
+    autoMigrate = true;
   };
   homebrew = {
     enable = true;
@@ -35,11 +36,19 @@
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
     brews = [
+      "awscli"
+      "docker"
+      "gh"
       "herdr"
+      "node"
+      "python@3.12"
+      "uv"
     ];
     casks = [
-      "wezterm"
       "claude-code"
+      "docker-desktop"
+      "librewolf"
+      "wezterm"
     ];
   };
 }

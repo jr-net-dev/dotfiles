@@ -5,7 +5,7 @@ let
 in
 
 {
-  home.username = user;
+  home.username = "jrf";
   home.homeDirectory = "/Users/${user}";
   home.stateVersion = "24.11";
   home.packages = with pkgs; [
@@ -35,8 +35,6 @@ in
       push = "git push";
       pull = "git pull";
       m = "git switch main";
-      cc = "claude --dangerously-skip-permissions";
-      co = "codex --full-auto";
     };
   };
 
