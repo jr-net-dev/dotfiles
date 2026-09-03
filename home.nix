@@ -42,7 +42,19 @@ in
     enable = true;
     settings = {
       add_newline = false;
-      format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
+      format = "$username$hostname$directory$git_branch$git_status$cmd_duration$character";
+      username = {
+        show_always = true;               # starship hides this off-root/off-SSH by default
+        format = "[$user]($style)";
+      };
+      hostname = {
+        ssh_only = false;                 # same - hidden unless SSH unless you say otherwise
+        format = "@[$hostname]($style):";
+      };
+      directory = {
+        truncation_length = 0;     # show the whole path, don't elide parent dirs
+        truncate_to_repo = false;  # don't collapse to the repo root
+      };
       character = {
         success_symbol = "[❯](purple)";
         error_symbol = "[❯](red)";
