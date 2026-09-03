@@ -16,8 +16,12 @@ in
     jq        # json on the command line
     lazygit
     neovim
-    # the font everything renders in
+    # fonts - swap between these in home/.config/wezterm/wezterm.lua
     nerd-fonts.hack
+    nerd-fonts.commit-mono
+    nerd-fonts.blex-mono
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.geist-mono
   ];
   fonts.fontconfig.enable = true;
   home.sessionVariables.EDITOR = "nvim";
