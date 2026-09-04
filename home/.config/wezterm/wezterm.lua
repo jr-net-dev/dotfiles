@@ -10,6 +10,22 @@ config.font = wezterm.font("BlexMono Nerd Font")       -- IBM Plex, warm + open
 -- config.font = wezterm.font("CaskaydiaCove Nerd Font")  -- Cascadia, roomy
 -- config.font = wezterm.font("GeistMono Nerd Font")      -- clean + airy
 -- config.font_size = 14.0                                -- default is 12.0
+-- Releasing the mouse no longer copies. The highlight stays on screen and you
+-- copy it yourself with Cmd+C. Cmd+click still opens links, which the plain
+-- Nop below would otherwise disable.
+config.mouse_bindings = {
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "NONE",
+		action = wezterm.action.Nop,
+	},
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "SUPER",
+		action = wezterm.action.OpenLinkAtMouseCursor,
+	},
+}
+
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 50
 config.hide_tab_bar_if_only_one_tab = true
