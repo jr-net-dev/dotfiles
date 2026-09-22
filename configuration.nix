@@ -38,6 +38,7 @@
     brews = [
       "awscli"
       "docker"
+      "ffmpeg"
       "gh"
       "herdr"
       "node"
