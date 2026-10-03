@@ -50,6 +50,7 @@
       "docker-desktop"
       "librewolf"
       "wezterm"
+      "tailscale-app"
     ];
   };
 }
