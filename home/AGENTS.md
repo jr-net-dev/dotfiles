@@ -196,6 +196,17 @@ Rules:
 - NEVER `git add`, stage, or commit anything under `scratchpad/`. Treat `git add scratchpad/...` as a hard error; if a `git add -A` would catch a scratchpad file, abort and add specific files instead.
 - If you're unsure whether a doc is "temporary" or "permanent," default to `scratchpad/`. Promoting later is cheap; un-committing later is annoying.
 
+### Session backlog
+
+Every project keeps `scratchpad/backlog.md`. Read it at the start of a session, before anything
+else. Update it before you stop, and whenever a task finishes or a decision gets made.
+
+It holds what a session with zero context needs to continue: current goal, what is done, what is
+next, open questions, and the specifics - file paths, IDs, URLs, commands that worked, approaches
+already tried and rejected. Not a narrative of the conversation.
+
+It is gitignored like the rest of `scratchpad/`.
+
 ### Maintaining this file
 
 Keep this file for knowledge useful to almost every future agent session in this project.
