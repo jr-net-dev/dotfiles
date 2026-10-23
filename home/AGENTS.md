@@ -207,6 +207,14 @@ already tried and rejected. Not a narrative of the conversation.
 
 It is gitignored like the rest of `scratchpad/`.
 
+### Machine setup from dotfiles
+
+This Mac is configured by nix-darwin and home-manager from `/Users/jrf/Dev/dotfiles`, a public repo, so keep work-specific details out of it.
+- This file is `home/AGENTS.md` there, and `~/.claude/settings.json` is `home/.claude/settings.json`. Both are live links, so any write to them changes the repo. Afterwards confirm the link is intact and review `git diff` in the repo.
+- `~/.zshrc` and `~/.zshenv` are generated and read-only. Environment variables and aliases go in `home.nix`, followed by `rebuild.sh`.
+- Homebrew packages must be declared in `configuration.nix`, because a rebuild removes anything undeclared. Never run or suggest an ad-hoc `brew install`.
+- `/usr/local/bin` needs sudo, so Jeff runs curl installers himself in a terminal.
+
 ### Maintaining this file
 
 Keep this file for knowledge useful to almost every future agent session in this project.
