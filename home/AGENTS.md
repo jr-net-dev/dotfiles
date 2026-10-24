@@ -215,6 +215,10 @@ This Mac is configured by nix-darwin and home-manager from `/Users/jrf/Dev/dotfi
 - Homebrew packages must be declared in `configuration.nix`, because a rebuild removes anything undeclared. Never run or suggest an ad-hoc `brew install`.
 - `/usr/local/bin` needs sudo, so Jeff runs curl installers himself in a terminal.
 
+### rtk for dev commands
+
+`rtk` is a token-optimized CLI proxy that compresses command output to save tokens. Prefer running shell commands through it: write `rtk git status`, not `git status`. Use `rtk proxy <cmd>` to run one raw when you need unfiltered output, and `rtk gain` to see savings. It is declared in `configuration.nix`; if `rtk` is missing or `rtk gain` reports command not found, check `which rtk`.
+
 ### Maintaining this file
 
 Keep this file for knowledge useful to almost every future agent session in this project.

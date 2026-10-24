@@ -35,6 +35,9 @@
     onActivation.cleanup = "zap";  # remove anything not listed here
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
+    taps = [
+      "rtk-ai/tap"  # rtk, token-optimized CLI proxy
+    ];
     brews = [
       "awscli"
       "docker"
@@ -43,7 +46,9 @@
       "herdr"
       "node"
       "python@3.12"
+      "rtk-ai/tap/rtk"
       "uv"
+      "yt-dlp"
     ];
     casks = [
       "claude-code"
